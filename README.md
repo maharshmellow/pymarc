@@ -1,3 +1,7 @@
+### MY MODIFICATIONS
+- made it run properly with cp1252 encoding for use with the Can Link Project
+
+
 ```
  _ __  _   _ _ __ ___   __ _ _ __ ___
 | '_ \| | | | '_ ` _ \ / _` | '__/ __|
