@@ -309,7 +309,12 @@ class Record(Iterator):
 
                     if to_unicode:
                         if self.leader[9] == 'a' or force_utf8:
-                            data = data.decode('utf-8', utf8_handling)
+                            # data = data.decode('utf-8', utf8_handling)
+                            # MANUALLY ADDED JUNE 20, 2017
+                            try:
+                                data = data.decode('utf-8', utf8_handling)
+                            except:
+                                data = data.decode("cp1252", utf8_handling)
                         else:
                             data = marc8_to_unicode(data, hide_utf8_warnings)
                     subfields.append(code)
